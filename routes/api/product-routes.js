@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const oneProduct = await Product.findByPk(req.params.id, {
-      include: [{ model: Category }, { model: tag }],
+      include: [{ model: Category }, { model: Tag }],
     });
 
     if (!oneProduct) {
@@ -56,14 +56,16 @@ router.post('/', (req, res) => {
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
-      if (req.body.tagIds.length) {
-        const productTagIdArr = req.body.tagIds.map((tag_id) => {
-          return {
-            product_id: product.id,
-            tag_id,
-          };
-        });
-        return ProductTag.bulkCreate(productTagIdArr);
+      if(req.body.tagIds && typeof req.body.productIds == "object"){
+        if (req.body.tagIds.length) {
+          const productTagIdArr = req.body.tagIds.map((tag_id) => {
+            return {
+              product_id: product.id,
+              tag_id: tag_id,
+            };
+          });
+          return ProductTag.bulkCreate(productTagIdArr);
+        }
       }
       // if no product tags, just respond
       res.status(200).json(product);
