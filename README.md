@@ -10,7 +10,6 @@ In this application were using Express.js API and configuring it to use Sequeliz
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- 
   
 ## Installation
 
