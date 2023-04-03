@@ -41,7 +41,7 @@ Please view the video demo link below to see how to use the application:
 <a href="placeholder">Back End Kiosk Video Demo</a>
 
     
-![alt text](/backendkiosksnippet.jpg)
+![alt text](/kiosk%20snippet.jpg)
 
 
 ## Credits
