@@ -38,7 +38,7 @@ https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs
 
 Please view the video demo link below to see how to use the application:
 
-<a href="https://drive.google.com/file/d/1Mp-A9FrTi0Vya1vmPDclbQWkb9YQdqFw/view">Back End Kiosk Video Demo</a>
+<a href="https://drive.google.com/file/d/178MLps3ps_F2o9TZGURkAgBpdl50ODu7/view">Back End Kiosk Video Demo</a>
 
     
 ![alt text](/kiosk%20snippet.jpg)
